@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="keypad_text_color">#ffffff</color>
+    <!-- Color for something interesting -->
+    <color name="escape">#4db6ac</color>
+    <color name="theme_color_accent">#b23d29</color>
+
+    <color name="seekbar_progress_color">#b23d29</color>
+    <color name="seekbar_second_progress_color">#edf7ed</color>
+
+    <color name="color_font_name_default">#89847e</color>
+    <color name="color_font_name_selected">#b23d29</color>
+
+
+    <color name="black_999999">#999999</color>
+    <color name="black_777777">#777777</color>
+    <color name="black_666666">#666666</color>
+    <color name="black_4c4c4c">#4c4c4c</color>
+    <color name="list_divider">#d6d6d6</color>
+    <color name="list_item_press">#f2f2f2</color>
+    <color name="feedback_btn_color_normal">#b23d29</color>
+    <color name="feedback_btn_color_pressed">#a3321f</color>
+    <color name="feedback_btn_color_disable">#66b23d29</color>
+    <color name="notice_d">#a3321f</color>
+    <color name="black_999">@color/black_999999</color>
+    <color name="divider_lv_color">#f2f2f2</color>
+    <color name="divider_color">#d6d6d6</color>
+    <color name="btn_pressed_gray_color">#b2b2b2</color>
+    <color name="notes_item_bg">#fafafa</color>
+    <color name="bible_chapter_color">#99ffffff</color>
+    <color name="image_edit_exit_btn_normal">#808080</color>
+    <color name="progress_bg_gray">#e6e6e6</color>
+
+    <color name="color_gray_text">#a4a4a4</color>
+
+    <!--nav bars-->
+    <color name="color_inactive_bar">#888888</color>
+    <color name="list_gray_bg">#f4f4f4</color>
+
+    <color name="progress_bar_gray_color">#e9e9e9</color>
+    <color name="read_finish_page_bg_color">#0f121a</color>
+    <color name="exit_app_msg_color">#a3a4a8</color>
+
+    <color name="language_guide_bg_color">#a55408</color>
+    <color name="language_guide_text_color">#ffecdb</color>
+
+    <color name="quote_start_color">#f0f0f0</color>
+    <color name="quote_content_bg_color">#fafafa</color>
+
+    <!-- Dialog -->
+    <color name="dialog_title">@color/black</color>
+    <color name="dialog_button">#333333</color>
+    <color name="dialog_button_disable">#cccccc</color>
+    <color name="dialog_msg_color">#757575</color>
+
+    <color name="color_line">#dadadb</color>
+    <color name="rate_us_text_disable">@color/color_gray_text</color>
+
+
+    <color name="ad_remove_unit_divider">#b15140</color>
+    <color name="ad_remove_save_money_reminder">#ffa200</color>
+    <color name="guide_tips_text_color">#1d1d1d</color>
+    <color name="guide_text_gray_color">#AAAAAA</color>
+
+    <color name="start_praying_text_color">@color/theme_color_accent</color>
+
+    <color name="transparent_50">#81000000</color>
+
+    <color name="gray">#10101A</color>
+
+    <color name="black_1a">#999ead</color>
+    <color name="guide_start_btn_color_normal">@color/theme_color_accent</color>¬
+    <color name="ls_verse_chapter_color">#a3ffffff</color>
+
+
+    <color name="devotion_item_default_bg">#E2DDDB</color>
+    <color name="black_translucent_50">#80000000</color>
+    <color name="red_circle">#FF3950</color>
+
+    <color name="new_flag_color">#ff7c27</color>
+    <color name="black_translucent_20">#33000000</color>
+    <color name="white_translucent_70">#afffffff</color>
+
+    <color name="wave_color">#c9776a</color>
+    <color name="black_aaa">#aaaaaa</color>
+
+    <color name="progress_bar_unreached_color">#f0d8d4</color>
+</resources>

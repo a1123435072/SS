@@ -1,0 +1,1 @@
+include ':app', ':library', ':Afw', ':AlkitabYes2', ':Snappy'

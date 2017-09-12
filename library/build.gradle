@@ -1,0 +1,86 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '26'
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.google.android.gms:play-services-ads:11.0.2'
+    compile 'com.google.android.gms:play-services-base:11.0.2'
+    compile('com.facebook.android:audience-network-sdk:4.23.0') {
+        exclude group: "com.android.support"
+        exclude group: "com.google.android.gms"
+    }
+    compile 'jp.wasabeef:blurry:2.1.1'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile "com.android.support:design:$supportLibVersion"
+    compile "com.android.support:support-annotations:$supportLibVersion"
+    compile "com.nineoldandroids:library:2.4.0"
+    compile 'com.daimajia.easing:library:1.0.1@aar'
+    compile 'com.daimajia.androidanimations:library:1.1.3@aar'
+    compile 'com.daasuu:EasingInterpolator:1.0.0'
+    compile 'com.wx.goodview:goodview:1.0.0'
+
+    // network
+    compile "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    compile "com.squareup.okhttp3:okhttp-urlconnection:$okhttpVersion"
+    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    compile 'com.google.code.gson:gson:2.7'
+
+    compile "com.afollestad.material-dialogs:core:$materialDialogsVersion"
+    compile "com.afollestad.material-dialogs:commons:$materialDialogsVersion"
+    debugCompile "com.facebook.stetho:stetho:$stethoVersion"
+    debugCompile "com.facebook.stetho:stetho-okhttp3:$stethoVersion"
+    compile("com.jakewharton.picasso:picasso2-okhttp3-downloader:1.0.2") {
+        exclude group: 'com.squareup.picasso', module: 'picasso'
+    }
+
+    compile 'net.sf.trove4j:trove4j:3.0.3'
+    compile "com.google.code.gson:gson:$gsonVersion"
+    compile 'com.android.support:multidex:1.0.1'
+    compile "com.android.support:percent:$supportLibVersion"
+    compile "com.takisoft.fix:preference-v7:23.4.0.1"
+    compile files('libs/AF-Android-SDK-v3.3.0.jar')
+    compile "com.android.support:cardview-v7:23.4.0"
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.joooonho:selectableroundedimageview:1.0.1'
+    compile 'com.makeramen:roundedimageview:2.3.0'
+    compile 'com.github.florent37:expectanim:1.0.0'
+    compile 'com.github.ksoichiro:android-observablescrollview:1.5.2'
+    compile 'com.lcodecorex:tkrefreshlayout:1.0.5'
+    compile 'com.github.lsjwzh.RecyclerViewPager:lib:v1.1.2'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile('com.mopub:mopub-sdk:4.13.0@aar') {
+        transitive = true
+    }
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    compile files('libs/1mobile_json.jar')
+    compile files('libs/1mobile_rest.jar')
+    compile files('libs/1mobile_cache_v1.0.3.jar')
+    compile files('libs/protobuf_micro.jar')
+
+}
+
+

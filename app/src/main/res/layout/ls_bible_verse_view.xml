@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="18dp"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp">
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_locker_verse_tag" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/txt_bible_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:text="@string/verse_of_day"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_18"
+            app:typeface="@string/font_Medium" />
+
+    </LinearLayout>
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:id="@+id/txt_bible_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/black_4c4c4c"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="center_vertical">
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/txt_bible_Chapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:maxLines="1"
+            android:textColor="@color/black_999999"
+            android:textSize="14sp"
+            app:typeface="@string/font_Light" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/read_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:maxLines="1"
+            android:text="@string/read"
+            android:textAllCaps="true"
+            android:textColor="@color/theme_color_accent"
+            android:textSize="14sp"
+            app:typeface="@string/font_Medium" />
+
+    </RelativeLayout>
+
+</LinearLayout>

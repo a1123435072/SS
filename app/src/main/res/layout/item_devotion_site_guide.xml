@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_42"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/circle_default_bg"
+                android:scaleType="centerCrop" />
+
+            <ImageButton
+                android:id="@+id/checkbox"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignBottom="@+id/image"
+                android:layout_alignRight="@+id/image"
+                android:background="@drawable/checkbox_bg_devotion"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingLeft="@dimen/margin_8"
+        android:paddingRight="@dimen/margin_14"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_size_14"
+        roboto:typeface="@string/font_Regular" />
+</LinearLayout>

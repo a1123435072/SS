@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NAVLoadingIndicatorView">
+        <item name="nvminWidth">48dip</item>
+        <item name="nvmaxWidth">48dip</item>
+        <item name="nvminHeight">48dip</item>
+        <item name="nvmaxHeight">48dip</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
+
+    <style name="NAVLoadingIndicatorView.Large">
+        <item name="nvminWidth">76dip</item>
+        <item name="nvmaxWidth">76dip</item>
+        <item name="nvminHeight">76dip</item>
+        <item name="nvmaxHeight">76dip</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
+
+    <style name="NAVLoadingIndicatorView.Small">
+        <item name="nvminWidth">24dip</item>
+        <item name="nvmaxWidth">24dip</item>
+        <item name="nvminHeight">24dip</item>
+        <item name="nvmaxHeight">24dip</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
+
+</resources>

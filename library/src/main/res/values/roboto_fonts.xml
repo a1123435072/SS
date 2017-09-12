@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="font_Light">Roboto-Light</string>
+    <string name="font_Bold">Roboto-Bold</string>
+    <string name="font_Medium">Roboto-Medium</string>
+    <string name="font_Regular">Roboto-Regular</string>
+    <string name="font_Thin">Roboto-Thin</string>
+    <string name="font_Lock_screen">Lock-screen</string>
+    <string name="font_GeosansLight">GeosansLight</string>
+    <string name="font_DroidSerif_Regular">DroidSerif-Regular</string>
+
+    <string-array name="fonts_names">
+        <item>@string/font_Light</item>
+        <item>@string/font_Bold</item>
+        <item>@string/font_Medium</item>
+        <item>@string/font_Regular</item>
+        <item>@string/font_Thin</item>
+        <item>@string/font_Lock_screen</item>
+        <item>@string/font_GeosansLight</item>
+        <item>@string/font_DroidSerif_Regular</item>
+    </string-array>
+</resources>

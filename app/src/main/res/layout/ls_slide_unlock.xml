@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/slid_to_unlock_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal|bottom"
+    android:orientation="horizontal">
+
+    <com.fw.ls.timely.view.SlideTextView
+        android:id="@+id/slid_to_unlock"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/slide_unlock"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:typeface="@string/font_Light" />
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/slid_to_unlock"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name"
+        android:textColor="@color/white_translucent_20"
+        android:textSize="@dimen/tv_size_14"
+        app:typeface="@string/font_Light" />
+
+</RelativeLayout>

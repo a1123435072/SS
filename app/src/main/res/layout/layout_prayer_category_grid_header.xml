@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_gravity="center_horizontal|top"
+    android:layout_marginBottom="@dimen/margin_12"
+    android:layout_marginLeft="-12dp"
+    android:layout_marginRight="-12dp"
+    android:background="@drawable/ic_prayer_header_bg"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/margin_24">
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:id="@+id/prayer_people_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="34000"
+        android:textColor="@color/theme_color_accent"
+        android:textSize="26sp"
+        roboto:typeface="@string/font_Regular" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/prayer_people_num"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@+id/prayer_people_num"
+        android:src="@drawable/ic_prayer_header_people" />
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/prayer_people_num"
+        android:layout_below="@+id/prayer_people_num"
+        android:gravity="center"
+        android:text="@string/members_pray"
+        android:textColor="@color/black_666666"
+        android:textSize="@dimen/tv_size_14"
+        roboto:typeface="@string/font_Light" />
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ls_prayer_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:paddingBottom="10dp">
+
+    <include layout="@layout/ls_card_page_layout" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/root_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/page_layout"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/ls_card_corner_radius"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingLeft="@dimen/margin_18"
+            android:paddingRight="@dimen/margin_18"
+            android:paddingTop="@dimen/margin_10">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_ls_line_left" />
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/prayer_category_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:text="@string/prayer_evening_notification_title"
+                    android:textColor="@color/black_999999"
+                    android:textSize="@dimen/tv_size_14"
+                    roboto:typeface="@string/font_Medium" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_ls_line_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_ls_pray" />
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/prayer_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="The Not-Yet-Married"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_18" />
+            </LinearLayout>
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/prayer_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.2"
+                android:maxLines="2"
+                android:text="Not my will, but yours, be done, O Lord. If those seven words and the faith"
+                android:textColor="@color/black_4c4c4c"
+                android:textSize="@dimen/tv_size_14"
+                roboto:typeface="@string/font_Regular" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:gravity="center_vertical">
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/praying_num_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:maxLines="1"
+                    android:text="2135 Praying"
+                    android:textColor="@color/black_999999"
+                    android:textSize="@dimen/tv_size_14"
+                    app:typeface="@string/font_Light" />
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/start_pray_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/start_praying"
+                    android:textAllCaps="true"
+                    android:textColor="@color/theme_color_accent"
+                    android:textSize="@dimen/tv_size_14"
+                    app:typeface="@string/font_Medium" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <bible.bibleverse.biblia.bibleverses.scripture.holywrit.verse.devotion.ad.view.LsScrollAdViewLayout
+        android:id="@+id/ad_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

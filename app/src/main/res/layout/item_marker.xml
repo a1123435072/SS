@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        style="@style/CardViewStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp">
+
+        <LinearLayout
+            android:id="@+id/root_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/list_item_top_height"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_14"
+                android:paddingRight="@dimen/margin_14">
+
+                <LinearLayout
+                    android:id="@+id/icon_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/ic_left_drawer_notes" />
+
+                    <View
+                        android:id="@+id/highlight_color"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:gravity="center_vertical"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/lCaption"
+                    style="@style/white_card_list_item_title_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_toRightOf="@+id/icon_layout"
+                    android:text="title"
+                    roboto:typeface="@string/font_Medium"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/lSnippet"
+                style="@style/white_card_list_item_summary_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_18"
+                android:layout_marginRight="@dimen/margin_18"
+                android:text="*Verse snippet or note content, etc. Verse snippet or note content, etc. Verse snippet or note content, etc. Verse snippet or note content, etc. Verse snippet or note content, etc. Verse snippet or note content, etc. Verse snippet or note content, etc. Verse snippet or note content, etc. "
+                roboto:typeface="@string/font_Regular"
+                tools:ignore="HardcodedText" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/list_item_bottom_height"
+                android:layout_marginLeft="@dimen/margin_18"
+                android:layout_marginRight="@dimen/margin_8">
+
+                <TextView
+                    android:id="@+id/lDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="2099-12-32"
+                    android:textColor="@color/black_999999"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:id="@+id/action_more"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_more_action" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="typeface" format="string" />
+
+    <!--Roboto-->
+    <declare-styleable name="RobotoTextView">
+        <attr name="typeface" />
+    </declare-styleable>
+    <declare-styleable name="RobotoButton">
+        <attr name="typeface" />
+    </declare-styleable>
+
+
+</resources>

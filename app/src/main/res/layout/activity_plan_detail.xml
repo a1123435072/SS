@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="62dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/img_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/plan_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:background="@color/divider_color"
+                android:scaleType="centerCrop" />
+
+            <!-- ToolBar -->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/transparent" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:layout_marginBottom="@dimen/margin_2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_10"
+                android:paddingLeft="@dimen/margin_16"
+                android:paddingRight="@dimen/margin_16">
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/id_plan_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/id_plan_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:textColor="@color/black_999999"
+                    android:textSize="@dimen/tv_size_12" />
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/id_plan_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:lineSpacingMultiplier="1.3"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_16" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:id="@+id/start_plan_btn"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/feedback_btn_bg"
+        android:gravity="center"
+        android:text="@string/start_plan"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tv_size_16"
+        android:visibility="gone"
+        roboto:typeface="@string/font_Medium" />
+
+    <ProgressBar
+        android:id="@+id/pg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:id="@+id/no_connection_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:gravity="center"
+        android:text="No Connection"
+        android:textColor="@color/black_333333"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

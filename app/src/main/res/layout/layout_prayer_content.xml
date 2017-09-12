@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/prayer_content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/transparent" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/prayer_complete_btn"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/prayer_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_marginTop="22dp"
+                android:ellipsize="marquee"
+                android:lineSpacingMultiplier="1.3"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                roboto:typeface="@string/font_Medium" />
+
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/prayer_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_marginTop="16dp"
+                android:gravity="left"
+                android:lineSpacingMultiplier="1.3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_20" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Action button -->
+    <FrameLayout
+        android:id="@+id/prayer_complete_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="@dimen/margin_28"
+        android:layout_marginRight="@dimen/margin_28"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_42"
+            android:layout_gravity="center"
+            android:background="@drawable/feedback_btn_bg"
+            android:gravity="center"
+            android:scaleType="center"
+            android:text="@string/amen"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_size_20" />
+    </FrameLayout>
+
+
+</RelativeLayout>

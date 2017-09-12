@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="split_handle_thickness">24dp</dimen>
+
+    <dimen name="panel_text_appearance_width">240dp</dimen>
+
+    <dimen name="reading_plan_day_heading_side_padding">0dp</dimen>
+
+    <dimen name="left_drawer_width">280dp</dimen>
+
+
+    <dimen name="home_function_entry_card_height">104dp</dimen>
+    <dimen name="home_function_entry_item_height">96dp</dimen>
+    <dimen name="home_function_entry_item_width">88dp</dimen>
+
+    <dimen name="margin_72">72dp</dimen>
+    <dimen name="margin_54">54dp</dimen>
+    <dimen name="margin_64">64dp</dimen>
+    <dimen name="margin_58">58dp</dimen>
+    <dimen name="margin_48">48dp</dimen>
+    <dimen name="margin_44">44dp</dimen>
+    <dimen name="margin_42">42dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_36">36dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_28">28dp</dimen>
+    <dimen name="margin_26">26dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_22">22dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_18">18dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_14">14dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_9">9dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_1">1dp</dimen>
+    <dimen name="search_box_layout_height">38dp</dimen>
+    <dimen name="image_text_defaut_size">27dp</dimen>
+
+    <dimen name="plan_item_img_width">156dp</dimen>
+    <dimen name="plan_item_img_height">88dp</dimen>
+
+    <dimen name="setting_item_height">54dp</dimen>
+    <dimen name="setting_item_height2">68dp</dimen>
+
+    <dimen name="list_item_top_height">54dp</dimen>
+    <dimen name="list_item_bottom_height">48dp</dimen>
+    <dimen name="mark_list_popup_window_width">200dp</dimen>
+    <dimen name="tv_size_10">10sp</dimen>
+    <dimen name="tv_size_12">12sp</dimen>
+    <dimen name="tv_size_14">14sp</dimen>
+    <dimen name="tv_size_16">16sp</dimen>
+    <dimen name="tv_size_18">18sp</dimen>
+    <dimen name="tv_size_20">20sp</dimen>
+
+    <!--56(toolbar height)+6(listview padding top)-->
+    <dimen name="main_list_top_margin">62dp</dimen>
+    <dimen name="toolbar_shadow_height">3dp</dimen>
+    <dimen name="read_verse_finish_content_height">256dp</dimen>
+
+    <!--drawhookview-->
+    <dimen name="cirle_stroke_width">3dp</dimen>
+    <dimen name="hook_stroke_width">3dp</dimen>
+    <dimen name="lineOffset">2dp</dimen>
+
+    <!--56(toolbar height)+12(marigin)+170(content height)-->
+    <dimen name="plan_finish_content_height">258dp</dimen>
+
+    <dimen name="extra_layout_margin_bottom">16dp</dimen>
+
+
+    <!-- dialog -->
+    <dimen name="dialog_min_width">300dp</dimen>
+    <dimen name="dialog_title_margin">32dp</dimen>
+    <dimen name="dialog_msg_margin">20dp</dimen>
+    <dimen name="dialog_operation_layout_height">48dp</dimen>
+    <dimen name="dialog_operation_layout_margin">24dp</dimen>
+
+    <dimen name="guide_tips_text_size">12sp</dimen>
+    <item name="guide_tips_text_line_space" format="float" type="dimen">1.0</item>
+    <dimen name="guide_dot_size">12dp</dimen>
+    <dimen name="guide_dot_margin">4dp</dimen>
+    <dimen name="bible_img_operation_layout">206dp</dimen>
+    <dimen name="actionbar_height">56dp</dimen>
+    <dimen name="actionbar_height_include_shadow">59dp</dimen>
+    <dimen name="version_download_item_height">62dp</dimen>
+
+    <dimen name="welcome_bottom_height">100dp</dimen>
+
+    <dimen name="rating_guide_swipe_distance">186dp</dimen>
+    <dimen name="rating_guide_gesture_margin">22dp</dimen>
+
+    <dimen name="slide_menu_item_icon_size">24dp</dimen>
+    <dimen name="slide_menu_large_item_height">48dp</dimen>
+    <dimen name="slide_menu_small_item_height">46dp</dimen>
+    <dimen name="slide_menu_width">278dp</dimen>
+
+    <!-- Ad layout size -->
+    <dimen name="complete_ad_icon_size">72dp</dimen>
+    <dimen name="complete_ad_bg_icon_size">140dp</dimen>
+    <dimen name="prayer_category_top_image_height">203dp</dimen>
+    <dimen name="parallax_image_height">180dp</dimen>
+
+    <dimen name="lock_charge_notify_height">64dp</dimen>
+    <dimen name="devotion_list_top_height">156dp</dimen>
+
+
+    <dimen name="actionbar_icon_size">48dp</dimen>
+    <dimen name="actionbar_icon_margin">0dp</dimen>
+    <dimen name="actionbar_icon_padding">8dp</dimen>
+    <dimen name="actionbar_icon_margin_small">0dp</dimen>
+
+
+    <dimen name="ls_card_corner_radius">4dp</dimen>
+
+    <dimen name="devotion_notify_float_height">146dp</dimen>
+    <dimen name="lock_screen_vp_padding_left">20dp</dimen>
+    <dimen name="lock_screen_vp_padding_right">44dp</dimen>
+    <dimen name="lock_screen_page_layout_height">36dp</dimen>
+
+
+</resources>

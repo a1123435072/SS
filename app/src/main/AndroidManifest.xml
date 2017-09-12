@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="bible.bibleverse.biblia.bibleverses.scripture.holywrit.verse.devotion">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- sync permissions -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+
+    <!-- from a separate app: devotion reminder -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <application
+        android:name=".base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Alkitab">
+        <activity
+            android:name=".base.ac.WelcomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".base.ac.GotoActivity"
+            android:configChanges="locale|layoutDirection|fontScale|keyboardHidden|keyboard"
+            android:theme="@style/Theme.Alkitab.DialogWhenLarge"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".base.ac.SettingsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:label="@string/pengaturan_alkitab" />
+        <activity
+            android:name=".base.ac.MarkerListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".base.ac.VersionsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:label="@string/kelola_versi"
+            android:parentActivityName=".base.ac.NewReadingActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".base.ac.NewReadingActivity" />
+
+            <!-- no type, lowercase .yes -->
+            <intent-filter android:label="@string/intent_filter_open_yes_file">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:host="*" />
+                <data android:pathPattern="/.*\\.yes" />
+                <data android:pathPattern="/.*\\..*\\.yes" />
+                <data android:pathPattern="/.*\\..*\\..*\\.yes" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\.yes" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.yes" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.yes" />
+            </intent-filter>
+            <!-- any type, lowercase .yes -->
+            <intent-filter android:label="@string/intent_filter_open_yes_file">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="*/*" />
+                <data android:host="*" />
+                <data android:pathPattern="/.*\\.yes" />
+                <data android:pathPattern="/.*\\..*\\.yes" />
+                <data android:pathPattern="/.*\\..*\\..*\\.yes" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\.yes" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.yes" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.yes" />
+            </intent-filter>
+            <!-- no type, uppercase .yes -->
+            <intent-filter android:label="@string/intent_filter_open_yes_file">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:host="*" />
+                <data android:pathPattern="/.*\\.YES" />
+                <data android:pathPattern="/.*\\..*\\.YES" />
+                <data android:pathPattern="/.*\\..*\\..*\\.YES" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\.YES" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.YES" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.YES" />
+            </intent-filter>
+            <!-- any type, uppercase .yes -->
+            <intent-filter android:label="@string/intent_filter_open_yes_file">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="*/*" />
+                <data android:host="*" />
+                <data android:pathPattern="/.*\\.YES" />
+                <data android:pathPattern="/.*\\..*\\.YES" />
+                <data android:pathPattern="/.*\\..*\\..*\\.YES" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\.YES" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.YES" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.YES" />
+            </intent-filter>
+            <!-- no type, lowercase .pdb -->
+            <intent-filter android:label="@string/intent_filter_open_pdb_file">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:host="*" />
+                <data android:pathPattern="/.*\\.pdb" />
+                <data android:pathPattern="/.*\\..*\\.pdb" />
+                <data android:pathPattern="/.*\\..*\\..*\\.pdb" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\.pdb" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.pdb" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.pdb" />
+            </intent-filter>
+            <!-- any type, lowercase .pdb -->
+            <intent-filter android:label="@string/intent_filter_open_pdb_file">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="*/*" />
+                <data android:host="*" />
+                <data android:pathPattern="/.*\\.pdb" />
+                <data android:pathPattern="/.*\\..*\\.pdb" />
+                <data android:pathPattern="/.*\\..*\\..*\\.pdb" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\.pdb" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.pdb" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.pdb" />
+            </intent-filter>
+            <!-- no type, uppercase .pdb -->
+            <intent-filter android:label="@string/intent_filter_open_pdb_file">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:host="*" />
+                <data android:pathPattern="/.*\\.PDB" />
+                <data android:pathPattern="/.*\\..*\\.PDB" />
+                <data android:pathPattern="/.*\\..*\\..*\\.PDB" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\.PDB" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.PDB" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.PDB" />
+            </intent-filter>
+            <!-- any type, uppercase .pdb -->
+            <intent-filter android:label="@string/intent_filter_open_pdb_file">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="*/*" />
+                <data android:host="*" />
+                <data android:pathPattern="/.*\\.PDB" />
+                <data android:pathPattern="/.*\\..*\\.PDB" />
+                <data android:pathPattern="/.*\\..*\\..*\\.PDB" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\.PDB" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\.PDB" />
+                <data android:pathPattern="/.*\\..*\\..*\\..*\\..*\\..*\\.PDB" />
+            </intent-filter>
+            <!-- chemical/x-pdb -->
+            <intent-filter android:label="@string/intent_filter_open_pdb_file">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="chemical/x-pdb" />
+            </intent-filter>
+            <!-- last: any file with application/octet-stream type -->
+            <intent-filter android:label="@string/intent_filter_open_pdb_or_yes_file">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="application/octet-stream" />
+                <data android:host="*" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".base.ac.SearchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:label="@string/search"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".base.ac.AboutUsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:label="@string/menuTentang">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".base.ac.NewMainActivity" />
+        </activity>
+        <activity
+            android:name=".base.ac.NoteActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:icon="@drawable/ic_attr_note"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".base.ac.AlertDialogActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.PopupActivity" />
+
+        <service android:name=".base.sv.DownloadService" />
+
+        <provider
+            android:name=".base.cp.Provider"
+            android:authorities="${applicationId}.provider"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+
+        <receiver
+            android:name=".base.br.VersionDownloadCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <uses-library
+            android:name="com.sec.android.app.multiwindow"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.samsung.android.sdk.multiwindow.enable"
+            android:value="true" />
+        <meta-data
+            android:name="com.sec.android.support.multiwindow"
+            android:value="true" />
+
+        <service
+            android:name=".base.sv.VersionConfigUpdaterService"
+            android:exported="false" />
+
+        <service android:name=".service.SyncService" />
+
+        <!-- from a separate app: devotion reminder -->
+
+        <receiver android:name=".reminder.br.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".notification.NotificationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="notification_cancelled" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".base.ac.PlanVerseDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:label="@string/verse_of_day">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".base.ac.NewMainActivity" />
+        </activity>
+
+        <activity
+            android:name=".base.ac.BibleImagesListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="6968f09aa29a3a6750f4ee98ac3755c1ef22cde5" />
+
+        <activity android:name=".base.ac.BibleImageActivity" />
+
+        <activity
+            android:name=".base.ac.ImgChooseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".base.ac.PlansDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity android:name=".base.ac.DonateActivity" />
+        <activity
+            android:name=".base.ac.PlanFinishActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".base.ac.PlansGridListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <receiver android:name=".receiver.DailyNotificationReceiver" />
+
+        <activity
+            android:name=".base.ac.PlanDayDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".base.ac.ExitAppActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".base.ac.ContainerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".base.ac.NewDailyVerseDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".base.ac.DevotionDetailWebActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".base.ac.VersionsDownloadedActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity android:name=".base.ac.RemoveAdsActivity" />
+
+        <activity
+            android:name=".base.ac.PlansActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".base.ac.NewMainActivity"
+            android:configChanges="orientation|screenSize|locale|layoutDirection|keyboard|keyboardHidden|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".base.ac.NewReadingActivity"
+            android:configChanges="orientation|screenSize|locale|layoutDirection|keyboard|keyboardHidden|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="yuku.alkitab.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".base.ac.DevotionSitesDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".base.ac.PrayerCategoryGridActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".base.ac.PrayerCategoryDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".base.ac.PrayerDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Pray"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".base.ac.LockChargeNotifyActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CustomTranslucent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".base.ac.DevotionSitesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".base.ac.DevotionSitesGuideActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".base.ac.DevotionAllListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".base.ac.DailyPrayerReminderSettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale" />
+
+        <activity
+            android:name=".base.ac.DailyVerseListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".base.ac.FavoriteActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection|fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+    </application>
+
+</manifest>

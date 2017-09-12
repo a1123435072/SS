@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- Applied to non-Spinner to give an appearance of drop-down control -->
+    <style name="FakeSpinner">
+        <item name="android:background">@drawable/abc_spinner_mtrl_am_alpha</item>
+        <item name="android:textSize">@dimen/tv_size_14</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+
+    <style name="tab_text_style">
+        <item name="android:textSize">@dimen/tv_size_14</item>
+        <item name="android:textColor">@color/black_999</item>
+    </style>
+
+    <style name="NotificationAnim">
+        <item name="android:windowEnterAnimation">@anim/floating_notification_anim_in</item>
+        <item name="android:windowExitAnimation">@anim/floating_notification_anim_out</item>
+    </style>
+
+    <style name="list_footer_no_connection">
+        <item name="android:textSize">@dimen/tv_size_14</item>
+        <item name="android:textColor">@color/color_gray_text</item>
+    </style>
+
+    <style name="list_footer_retry">
+        <item name="android:textSize">@dimen/tv_size_14</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CustomTabTitleTextAppearance">
+        <item name="android:textSize">@dimen/tv_size_14</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:height">24dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="white_card_list_style">
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:fastScrollEnabled">false</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:divider">@null</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:listSelector">@color/transparent</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <style name="white_card_list_style_no_top_padding" parent="white_card_list_style">
+        <item name="android:paddingTop">0dp</item>
+    </style>
+
+    <style name="white_card_list_style_with_divider" parent="white_card_list_style">
+        <item name="android:dividerHeight">12dp</item>
+    </style>
+
+    <style name="white_card_list_style_with_margin" parent="white_card_list_style">
+        <item name="android:layout_marginLeft">6dp</item>
+        <item name="android:layout_marginRight">6dp</item>
+    </style>
+
+    <style name="white_card_list_item_summary_style">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:textColor">@color/black_4c4c4c</item>
+        <item name="android:textSize">@dimen/tv_size_16</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <style name="white_card_list_item_title_style">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/tv_size_20</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="lockscreen_white_card_list_item_title_style">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/tv_size_18</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="lockscreen_card_list_item_summary_style">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">5</item>
+        <item name="android:textColor">@color/black_4c4c4c</item>
+        <item name="android:textSize">@dimen/tv_size_14</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+
+    <style name="CardViewStyle" parent="CardView">
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">4dp</item>
+    </style>
+
+    <style name="LanguageGuideViewStyle" parent="CardViewStyle">
+        <item name="cardBackgroundColor">@color/language_guide_bg_color</item>
+    </style>
+
+    <style name="LanguageGuideSummaryStyle">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:textColor">@color/language_guide_text_color</item>
+        <item name="android:textSize">@dimen/tv_size_16</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <style name="QuoteTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/tv_size_14</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="DevotionSourceInfoStyle">
+        <item name="android:textColor">@color/black_999999</item>
+        <item name="android:textSize">@dimen/tv_size_12</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="DevotionContentStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/tv_size_16</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
+
+    <style name="DevotionListTitleTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/tv_size_16</item>
+    </style>
+
+    <style name="ListIconStyle">
+        <item name="sriv_border_width">0dp</item>
+        <item name="sriv_left_bottom_corner_radius">4dip</item>
+        <item name="sriv_left_top_corner_radius">4dip</item>
+        <item name="sriv_oval">false</item>
+        <item name="sriv_right_bottom_corner_radius">4dip</item>
+        <item name="sriv_right_top_corner_radius">4dip</item>
+    </style>
+
+    <style name="DevotionTitleStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/tv_size_20</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="DevotionDateTextStyle">
+        <item name="android:textColor">@color/black_999999</item>
+        <item name="android:textSize">@dimen/tv_size_14</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- Dialog -->
+    <style name="CustomDialogTheme" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Dialog" />
+
+    <style name="Dialog.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black_333333</item>
+    </style>
+
+    <style name="Dialog.SubTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/dialog_msg_color</item>
+    </style>
+
+    <style name="Dialog.Message">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/dialog_msg_color</item>
+    </style>
+
+    <style name="Dialog.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/dialog_button</item>
+    </style>
+
+    <style name="Dialog.Button.Positive">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/dialog_button</item>
+    </style>
+
+    <!--rating dialog-->
+    <style name="ratingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_full</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:maxHeight">48dip</item>
+    </style>
+
+    <style name="guide_tips_style">
+        <item name="android:textSize">@dimen/guide_tips_text_size</item>
+        <item name="android:textColor">@color/guide_tips_text_color</item>
+        <item name="android:lineSpacingMultiplier">@dimen/guide_tips_text_line_space</item>
+    </style>
+
+    <style name="slide_menu_large_item">
+        <item name="android:textSize">@dimen/tv_size_16</item>
+        <item name="android:textColor">@color/black_333333</item>
+    </style>
+
+    <style name="LockChargeNotificationAnim">
+        <item name="android:windowEnterAnimation">@anim/floating_charge_notification_in</item>
+        <item name="android:windowExitAnimation">@anim/floating_charge_notification_out</item>
+    </style>
+</resources>

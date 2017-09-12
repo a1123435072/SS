@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/version_guide"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_24"
+    android:visibility="gone">
+
+    <android.support.v7.widget.CardView
+        style="@style/LanguageGuideViewStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16">
+
+        <RelativeLayout
+            android:id="@+id/root_view"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_book_in_language_guide" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="112dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingRight="@dimen/margin_18"
+                    android:paddingTop="@dimen/margin_18">
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="title"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_18"
+                        roboto:typeface="@string/font_Medium" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/msg"
+                        style="@style/LanguageGuideSummaryStyle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_6"
+                        android:text="@string/notice_download_dialog_msg"
+                        roboto:typeface="@string/font_Regular"
+                        tools:ignore="HardcodedText" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/list_item_bottom_height">
+
+                        <com.fw.basemodules.view.RobotoTextView
+                            android:id="@+id/ok_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="18dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:drawableLeft="@drawable/ic_download_in_language_guide"
+                            android:drawablePadding="9dp"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_6"
+                            android:text="@string/ed_download_button"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/tv_size_14"
+                            roboto:typeface="@string/font_Medium"
+                            tools:ignore="HardcodedText" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/close_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:alpha="0.6"
+                        android:src="@drawable/ic_close_in_language_guide" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_20">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/dialog_base_title"
+            style="@style/Dialog.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_12"
+            android:gravity="center_vertical"
+            roboto:typeface="@string/font_Medium" />
+
+        <!-- Body -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Sub title -->
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/sub_title"
+                style="@style/Dialog.SubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Message -->
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/message"
+                style="@style/Dialog.Message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

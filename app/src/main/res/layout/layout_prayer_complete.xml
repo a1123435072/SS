@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/prayer_complete_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="invisible">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/shining_light_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="126dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_shining_light"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="160dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_prayer_cross"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/txt_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/amen"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_16"
+                roboto:typeface="@string/font_Medium" />
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="@dimen/margin_8"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.3"
+                android:text="@string/pray_complete_hint"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_14"
+                roboto:typeface="@string/font_Light" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="48dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/back_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/prayer_back_btn_bg"
+            android:gravity="center"
+            android:text="@string/back"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_size_16"
+            roboto:typeface="@string/font_Light" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/next_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="1"
+            android:background="@drawable/prayer_next_btn_bg"
+            android:gravity="center"
+            android:text="@string/next_prayer"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_size_16" />
+    </LinearLayout>
+
+
+</RelativeLayout>

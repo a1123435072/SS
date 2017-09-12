@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    android:layout_width="@dimen/slide_menu_width"
+    android:layout_height="match_parent"
+    android:layout_gravity="left"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/remove_ads_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:background="?attr/selectableItemBackground"
+                    android:minHeight="@dimen/slide_menu_large_item_height"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_28"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_left_drawer_remove_ads" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        style="@style/slide_menu_large_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text="@string/remove_ads"
+                        roboto:typeface="@string/font_Medium" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/donate_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:minHeight="@dimen/slide_menu_large_item_height"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_28"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_left_drawer_donate" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        style="@style/slide_menu_large_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text="@string/donate"
+                        roboto:typeface="@string/font_Medium" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#d8dbd8" />
+
+                <LinearLayout
+                    android:id="@+id/highlights_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:minHeight="@dimen/slide_menu_large_item_height"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_28"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_left_drawer_highlights" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        style="@style/slide_menu_large_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_weight="1"
+                        android:text="@string/bmcat_highlights"
+                        roboto:typeface="@string/font_Medium" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/highlights_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_24"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black_999999"
+                        android:textSize="@dimen/tv_size_14"
+                        roboto:typeface="@string/font_Regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bookmarks_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:minHeight="@dimen/slide_menu_large_item_height"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_28"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_left_drawer_bookmarks" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        style="@style/slide_menu_large_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_weight="1"
+                        android:text="@string/me_section_bookmarks"
+                        roboto:typeface="@string/font_Medium" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/bookmarks_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_24"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black_999999"
+                        android:textSize="@dimen/tv_size_14"
+                        roboto:typeface="@string/font_Regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/notes_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:minHeight="@dimen/slide_menu_large_item_height"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_28"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_left_drawer_notes" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        style="@style/slide_menu_large_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_weight="1"
+                        android:text="@string/bmcat_notes"
+                        roboto:typeface="@string/font_Medium" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/notes_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_24"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black_999999"
+                        android:textSize="@dimen/tv_size_14"
+                        roboto:typeface="@string/font_Regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/images_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:minHeight="@dimen/slide_menu_large_item_height"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_28"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_left_drawer_images" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        style="@style/slide_menu_large_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_weight="1"
+                        android:text="@string/images"
+                        roboto:typeface="@string/font_Medium" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/images_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_24"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black_999999"
+                        android:textSize="@dimen/tv_size_14"
+                        roboto:typeface="@string/font_Regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/plans_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:minHeight="@dimen/slide_menu_large_item_height"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_28"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_left_drawer_plans" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        style="@style/slide_menu_large_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_weight="1"
+                        android:text="@string/plans"
+                        roboto:typeface="@string/font_Medium" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/plans_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_24"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black_999999"
+                        android:textSize="@dimen/tv_size_14"
+                        roboto:typeface="@string/font_Regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fav_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:minHeight="@dimen/slide_menu_large_item_height"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_28"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_fav_select" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        style="@style/slide_menu_large_item"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_weight="1"
+                        android:text="@string/favorites"
+                        roboto:typeface="@string/font_Medium" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#d8dbd8" />
+
+        <include layout="@layout/activity_new_main_left_drawer_bottom_action" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginLeft="@dimen/margin_22"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_about_launcher" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:src="@drawable/ic_logo" />
+
+        </LinearLayout>
+
+        <include layout="@layout/toolbar_shadow" />
+    </LinearLayout>
+
+</RelativeLayout>

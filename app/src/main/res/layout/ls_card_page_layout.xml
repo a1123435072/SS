@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/page_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/lock_screen_page_layout_height">
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:id="@+id/page_num"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ls_card_page_num_corner_bg"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textColor="@color/black_aaa"
+        android:textSize="11sp"
+        app:typeface="@string/font_Light" />
+
+
+</RelativeLayout>

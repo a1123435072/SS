@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.formats.NativeContentAdView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/native_content_adview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ad_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ad_layout_round_corner_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.joooonho.SelectableRoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ad_image"
+                android:layout_alignTop="@+id/ad_image"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ad_image_default"
+                app:sriv_left_bottom_corner_radius="0dp"
+                app:sriv_left_top_corner_radius="4dp"
+                app:sriv_right_bottom_corner_radius="0dp"
+                app:sriv_right_top_corner_radius="4dp" />
+
+            <com.joooonho.SelectableRoundedImageView
+                android:id="@+id/ad_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ad_cover_height"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:sriv_left_bottom_corner_radius="0dp"
+                app:sriv_left_top_corner_radius="4dp"
+                app:sriv_right_bottom_corner_radius="0dp"
+                app:sriv_right_top_corner_radius="4dp" />
+
+            <ImageView
+                android:id="@+id/ad_tag_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.4"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/ad_tag_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingBottom="1dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="1dp"
+                android:rotation="315"
+                android:text="AD"
+                android:textColor="#ffffff"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ad_layout_corner_bg"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_8">
+
+            <ImageView
+                android:id="@+id/ad_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/ad_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:typeface="@string/font_Regular" />
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/ad_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/white_translucent_60"
+                    android:textSize="10sp"
+                    app:typeface="@string/font_Light" />
+
+            </LinearLayout>
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/ad_open_link"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/feedback_btn_bg"
+                android:gravity="center"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:singleLine="true"
+                android:text="Learn More"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:typeface="@string/font_Light" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.gms.ads.formats.NativeContentAdView>

@@ -1,0 +1,41 @@
+<!-- Copyright 2014 ACR Development -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reload_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/warning_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/no_connection"
+            android:textColor="@color/black_666666"
+            android:textSize="@dimen/tv_size_14" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/btn_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:autoLink="all"
+            android:text="@string/retry"
+            android:textColor="@color/black_666666"
+            android:textSize="@dimen/tv_size_14" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

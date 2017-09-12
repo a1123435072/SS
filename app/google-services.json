@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "636708239753",
+    "firebase_url": "https://bible-381b5.firebaseio.com",
+    "project_id": "bible-381b5",
+    "storage_bucket": "bible-381b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636708239753:android:601bb76f614d7f28",
+        "android_client_info": {
+          "package_name": "bible.bibleverse.biblia.bibleverses.scripture.holywrit.verse.devotion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636708239753-rrck47jf2ukecoutd4o26hp3j0lp9qe4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAytTkwkRmOJyNnhTSbOhVxCe2qS2DOi80"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

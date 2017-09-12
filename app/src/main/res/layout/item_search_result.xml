@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_list_item_bg"
+    android:paddingLeft="@dimen/margin_16"
+    android:paddingRight="@dimen/margin_16">
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:id="@+id/lReference"
+        style="@style/white_card_list_item_title_style"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/list_item_top_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:text="*reference"
+        roboto:typeface="@string/font_Medium"
+        tools:ignore="HardcodedText" />
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:id="@+id/lSnippet"
+        style="@style/white_card_list_item_summary_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@id/lReference"
+        android:gravity="top"
+        android:paddingBottom="20dp"
+        android:text="*snippet"
+        roboto:typeface="@string/font_Regular"
+        tools:ignore="HardcodedText" />
+</RelativeLayout>

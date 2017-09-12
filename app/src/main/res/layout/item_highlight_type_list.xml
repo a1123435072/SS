@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="66dp"
+    android:layout_height="42dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="42dp"
+        android:layout_height="42dp">
+
+        <View
+            android:id="@+id/add_btn"
+            android:layout_width="42dp"
+            android:layout_height="42dp" />
+
+        <ImageView
+            android:id="@+id/delete_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_delete" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="24dp"
+        android:layout_height="match_parent" />
+</LinearLayout>

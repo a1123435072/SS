@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_separator_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="@dimen/margin_4"
+        android:layout_height="@dimen/margin_16"
+        android:background="@drawable/new_flag_drawable" />
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:id="@+id/popular_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_14"
+        android:text="@string/popular_devotion"
+        android:textColor="@color/black_666666"
+        android:textSize="@dimen/tv_size_14" />
+
+</LinearLayout>

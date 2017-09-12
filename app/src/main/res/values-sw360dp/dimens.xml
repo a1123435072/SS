@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- guide layout -->
+    <dimen name="guide_tips_text_size">16sp</dimen>
+    <item name="guide_tips_text_line_space" format="float" type="dimen">1.2</item>
+    <dimen name="guide_dot_size">14dp</dimen>
+    <dimen name="guide_dot_margin">4dp</dimen>
+
+</resources>

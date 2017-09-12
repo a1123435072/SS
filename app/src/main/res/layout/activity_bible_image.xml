@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- ToolBar -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:titleTextColor="@color/black" />
+
+    <include layout="@layout/toolbar_shadow" />
+
+    <!--image edit content layout-->
+    <RelativeLayout
+        android:id="@+id/image_edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/bible_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black"
+            android:textSize="27sp" />
+
+        <ImageView
+            android:id="@+id/watermark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!--control layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="206dp">
+
+        <LinearLayout
+            android:id="@+id/control_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/function_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="136dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <include layout="@layout/text_font_control_layout" />
+
+                <include layout="@layout/text_color_control_layout" />
+
+                <include layout="@layout/text_alignment_control_layout" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color" />
+
+            <!--bottom button layout-->
+            <include layout="@layout/image_edit_btn_layout" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/save_operation_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/saving_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/saving"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_14" />
+
+                <ProgressBar
+                    android:id="@+id/saving_image_progressbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:progressDrawable="@drawable/progressbar_saving_image" />
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/cancle_btn"
+                    android:layout_width="220dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/image_edit_exit_btn_bg"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_size_20" />
+            </LinearLayout>
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/share_btn"
+                android:layout_width="220dp"
+                android:layout_height="42dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/feedback_btn_bg"
+                android:gravity="center"
+                android:text="@string/menuShare"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_16"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

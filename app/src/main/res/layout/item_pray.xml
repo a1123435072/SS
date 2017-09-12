@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_14"
+            android:paddingLeft="@dimen/margin_18"
+            android:paddingRight="@dimen/margin_18"
+            android:paddingTop="@dimen/margin_14">
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/title"
+                style="@style/white_card_list_item_title_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_4"
+                android:text="title"
+                roboto:typeface="@string/font_Medium" />
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black_999999"
+                android:textSize="@dimen/tv_size_12"
+                roboto:typeface="@string/font_Light" />
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/snippet"
+                style="@style/white_card_list_item_summary_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.2"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_16"
+                roboto:typeface="@string/font_Regular" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/more_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fafafa"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dfdfdf" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_bottom_height"
+            android:background="?android:attr/selectableItemBackground"
+            android:duplicateParentState="true"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_18"
+            android:paddingRight="@dimen/margin_18">
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/read_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/ic_prayer_palm"
+                android:drawablePadding="@dimen/margin_4"
+                android:gravity="center"
+                android:textColor="@color/black_666666"
+                android:textSize="@dimen/tv_size_14"
+                roboto:typeface="@string/font_Regular" />
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/start_praying"
+                android:textAllCaps="true"
+                android:textColor="@color/start_praying_text_color"
+                android:textSize="@dimen/tv_size_14"
+                roboto:typeface="@string/font_Medium" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/toolbar_shadow" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_10" />
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/head_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/head_icon_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="00:00"
+            android:textColor="#ffffff"
+            android:textSize="42sp"
+            app:typeface="@string/font_Light" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="24dp"
+            android:text="NA"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            app:typeface="@string/font_Light" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/switch_menu"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/ad_margin_left_gray_padding"
+        android:layout_marginTop="16dp"
+        android:addStatesFromChildren="true"
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_locker_setting" />
+    </RelativeLayout>
+</RelativeLayout>

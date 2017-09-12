@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:orientation="vertical">
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/verses_reference_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginRight="@dimen/margin_16"
+                android:text="Genesis 3:2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_16"
+                app:typeface="@string/font_Medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginRight="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_18"
+                android:text="@string/note_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_14" />
+
+            <EditText
+                android:id="@+id/tCaption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginRight="@dimen/margin_16"
+                android:gravity="top"
+                android:imeOptions="actionGo"
+                android:inputType="text|textAutoCorrect|textCapSentences|textMultiLine"
+                tools:ignore="LabelFor" />
+
+            <bible.bibleverse.biblia.bibleverses.scripture.holywrit.verse.devotion.base.widget.VerseItemView
+                android:id="@+id/verse_item_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginRight="@dimen/margin_16"
+                android:lineSpacingMultiplier="1.3"
+                android:paddingBottom="@dimen/margin_20"
+                android:paddingTop="@dimen/margin_24"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_16" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/divider_color" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/btn_bg"
+            android:padding="10dp"
+            android:text="@string/ok"
+            android:textAllCaps="true"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/tv_size_14"
+            app:typeface="@string/font_Medium" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/cancle_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toLeftOf="@+id/ok_btn"
+            android:background="@drawable/btn_bg"
+            android:padding="10dp"
+            android:text="@string/cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/tv_size_14"
+            app:typeface="@string/font_Medium" />
+
+    </RelativeLayout>
+
+</LinearLayout>

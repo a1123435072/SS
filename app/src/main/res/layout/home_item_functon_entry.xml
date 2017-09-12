@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_4"
+        android:paddingRight="@dimen/margin_4">
+
+        <LinearLayout
+            android:id="@+id/devotion_item"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/home_function_entry_item_height"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="3dp">
+
+                <ImageView
+                    android:id="@+id/devotion_updated_contour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_updated_contour"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/margin_48"
+                    android:layout_height="@dimen/margin_48"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_home_entry_devotion">
+
+                    <RelativeLayout
+                        android:id="@+id/devotion_info_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/circle_green"
+                        android:gravity="center_horizontal">
+
+                        <com.fw.basemodules.view.RobotoTextView
+                            android:id="@+id/devotion_text_center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:shadowColor="@color/black_666666"
+                            android:shadowDx="2"
+                            android:shadowDy="4"
+                            android:text="9"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/tv_size_20"
+                            roboto:typeface="@string/font_Light" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/devotion_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menuDevotion"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_14"
+                roboto:typeface="@string/font_Regular" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/prayer_item"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/home_function_entry_item_height"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/margin_48"
+                android:layout_height="@dimen/margin_48"
+                android:layout_marginTop="@dimen/margin_8"
+                android:background="@drawable/ic_home_entry_prayer">
+
+                <RelativeLayout
+                    android:id="@+id/pray_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circle_green"
+                    android:gravity="center_horizontal">
+
+                    <com.sackcentury.shinebuttonlib.ShineButton
+                        android:id="@+id/prayer_shine_button"
+                        android:layout_width="@dimen/margin_24"
+                        android:layout_height="@dimen/margin_24"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        app:allow_random_color="false"
+                        app:big_shine_color="#ffffff"
+                        app:btn_color="#33ffffff"
+                        app:btn_fill_color="#ffffff"
+                        app:click_animation_duration="200"
+                        app:enable_flashing="false"
+                        app:shine_animation_duration="1500"
+                        app:shine_count="15"
+                        app:shine_distance_multiple="1.5"
+                        app:shine_turn_angle="10"
+                        app:siShape="@raw/like"
+                        app:small_shine_color="#80ffffff"
+                        app:small_shine_offset_angle="20" />
+
+                    <me.itangqi.waveloadingview.WaveLoadingView
+                        android:id="@+id/pray_wave_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:wlv_borderColor="@color/theme_color_accent"
+                        app:wlv_borderWidth="@dimen/margin_2"
+                        app:wlv_progressValue="100"
+                        app:wlv_round_rectangle="true"
+                        app:wlv_shapeType="circle"
+                        app:wlv_triangle_direction="north"
+                        app:wlv_waveAmplitude="50"
+                        app:wlv_waveColor="@color/wave_color"
+                        app:wlv_wave_background_Color="@color/theme_color_accent" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/pray_text_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_6"
+                        android:shadowColor="@color/black_666666"
+                        android:shadowDx="2"
+                        android:shadowDy="4"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_20"
+                        roboto:typeface="@string/font_Light" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/pray_text_bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/margin_6"
+                        android:shadowColor="@color/black_666666"
+                        android:shadowDx="2"
+                        android:shadowDy="4"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_10"
+                        roboto:typeface="@string/font_Light" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="@string/prayer"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_14"
+                roboto:typeface="@string/font_Regular" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/verse_item"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/home_function_entry_item_height"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/margin_48"
+                android:layout_height="@dimen/margin_48"
+                android:layout_marginTop="@dimen/margin_8"
+                android:background="@drawable/ic_home_entry_verse">
+
+                <com.sackcentury.shinebuttonlib.ShineButton
+                    android:id="@+id/verse_shine_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:allow_random_color="false"
+                    app:big_shine_color="#ffffff"
+                    app:btn_color="#33ffffff"
+                    app:btn_fill_color="#ffffff"
+                    app:click_animation_duration="200"
+                    app:enable_flashing="false"
+                    app:shine_animation_duration="1500"
+                    app:shine_count="15"
+                    app:shine_distance_multiple="1.5"
+                    app:shine_turn_angle="10"
+                    app:siShape="@raw/like"
+                    app:small_shine_color="#80ffffff"
+                    app:small_shine_offset_angle="20" />
+
+                <RelativeLayout
+                    android:id="@+id/verse_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circle_green"
+                    android:gravity="center_horizontal"
+                    android:visibility="gone">
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/verse_text_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_6"
+                        android:shadowColor="@color/black_666666"
+                        android:shadowDx="2"
+                        android:shadowDy="4"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_20"
+                        roboto:typeface="@string/font_Light" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/verse_text_bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/margin_6"
+                        android:shadowColor="@color/black_666666"
+                        android:shadowDx="2"
+                        android:shadowDy="4"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_10"
+                        roboto:typeface="@string/font_Light" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="@string/ayat_sebelumangka"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_14"
+                roboto:typeface="@string/font_Regular" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/read_item"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/home_function_entry_item_height"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/margin_48"
+                android:layout_height="@dimen/margin_48"
+                android:layout_marginTop="@dimen/margin_8"
+                android:background="@drawable/ic_home_entry_read">
+
+                <RelativeLayout
+                    android:id="@+id/read_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circle_green"
+                    android:gravity="center_horizontal">
+
+                    <com.sackcentury.shinebuttonlib.ShineButton
+                        android:id="@+id/read_shine_button"
+                        android:layout_width="@dimen/margin_24"
+                        android:layout_height="@dimen/margin_24"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        app:allow_random_color="false"
+                        app:big_shine_color="#ffffff"
+                        app:btn_color="#33ffffff"
+                        app:btn_fill_color="#ffffff"
+                        app:click_animation_duration="200"
+                        app:enable_flashing="false"
+                        app:shine_animation_duration="1500"
+                        app:shine_count="15"
+                        app:shine_distance_multiple="1.5"
+                        app:shine_turn_angle="10"
+                        app:siShape="@raw/like"
+                        app:small_shine_color="#80ffffff"
+                        app:small_shine_offset_angle="20" />
+
+                    <me.itangqi.waveloadingview.WaveLoadingView
+                        android:id="@+id/read_wave_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:wlv_borderColor="@color/theme_color_accent"
+                        app:wlv_borderWidth="@dimen/margin_2"
+                        app:wlv_progressValue="40"
+                        app:wlv_round_rectangle="true"
+                        app:wlv_shapeType="circle"
+                        app:wlv_triangle_direction="north"
+                        app:wlv_waveAmplitude="50"
+                        app:wlv_waveColor="@color/wave_color"
+                        app:wlv_wave_background_Color="@color/theme_color_accent" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/read_text_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_6"
+                        android:shadowColor="@color/black_666666"
+                        android:shadowDx="2"
+                        android:shadowDy="4"
+                        android:text="3"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_20"
+                        roboto:typeface="@string/font_Light" />
+
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/read_text_bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/margin_6"
+                        android:shadowColor="@color/black_666666"
+                        android:shadowDx="2"
+                        android:shadowDy="4"
+                        android:text="Min"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_10"
+                        roboto:typeface="@string/font_Light" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="@string/read"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_14"
+                roboto:typeface="@string/font_Regular" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/toolbar_shadow" />
+
+</LinearLayout>

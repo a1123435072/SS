@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_guide_lock_screen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:fontFamily="serif"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="@string/guide_tiitle"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/guide_dot_size"
+                android:layout_height="@dimen/guide_dot_size"
+                android:layout_marginTop="@dimen/guide_dot_margin"
+                android:src="@drawable/ic_guide_dot" />
+
+            <com.fw.basemodules.view.RobotoTextView
+                style="@style/guide_tips_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:text="@string/guide_tips1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/guide_dot_size"
+                android:layout_height="@dimen/guide_dot_size"
+                android:layout_marginTop="@dimen/guide_dot_margin"
+                android:src="@drawable/ic_guide_dot" />
+
+            <com.fw.basemodules.view.RobotoTextView
+                style="@style/guide_tips_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:text="@string/guide_tips2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/guide_dot_size"
+                android:layout_height="@dimen/guide_dot_size"
+                android:layout_marginTop="@dimen/guide_dot_margin"
+                android:src="@drawable/ic_guide_dot" />
+
+            <com.fw.basemodules.view.RobotoTextView
+                style="@style/guide_tips_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:text="@string/guide_tips3" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:id="@+id/try_btn"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/guide_btn_bg"
+        android:gravity="center"
+        android:text="@string/try_it"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tv_size_16"
+        roboto:typeface="@string/font_Medium" />
+
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:id="@+id/cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:paddingTop="10dp"
+        android:text="@string/not_now"
+        android:textColor="@color/guide_text_gray_color"
+        android:textSize="@dimen/tv_size_14"
+        roboto:typeface="@string/font_Medium" />
+</LinearLayout>

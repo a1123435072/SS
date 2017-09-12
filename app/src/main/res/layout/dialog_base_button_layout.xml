@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_base_button_layout"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="vertical">
+
+    <!-- Buttons -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/btn_negative"
+            style="@style/Dialog.Button"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/abc_item_background_holo_light"
+            android:gravity="center"
+            android:textAllCaps="true"
+            roboto:typeface="@string/font_Regular" />
+
+        <View
+            android:id="@+id/divider_1"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/color_line" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/btn_neutral"
+            style="@style/Dialog.Button"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/abc_item_background_holo_light"
+            android:gravity="center"
+            android:textAllCaps="true"
+            roboto:typeface="@string/font_Regular" />
+
+        <View
+            android:id="@+id/divider_2"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/color_line" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/btn_positive"
+            style="@style/Dialog.Button.Positive"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/abc_item_background_holo_light"
+            android:gravity="center"
+            android:textAllCaps="true"
+            roboto:typeface="@string/font_Regular" />
+    </LinearLayout>
+
+</LinearLayout>

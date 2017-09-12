@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <!-- Content(Custom View Area) -->
+    <LinearLayout
+        android:id="@+id/dialog_base_content_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <include layout="@layout/dialog_base_button_layout" />
+</LinearLayout>

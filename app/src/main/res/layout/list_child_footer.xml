@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+     Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ProgressBar
+        android:id="@+id/footer_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/reload_group"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/footer_main_text"
+            style="@style/list_footer_no_connection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/list_foot_warning"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="@string/no_connection"
+            roboto:typeface="@string/font_Light" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/btn_reload"
+            style="@style/list_footer_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/reload_btn_bg"
+            android:gravity="center_vertical|center_horizontal"
+            android:minWidth="100dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/retry"
+            roboto:typeface="@string/font_Light" />
+    </LinearLayout>
+
+</LinearLayout>

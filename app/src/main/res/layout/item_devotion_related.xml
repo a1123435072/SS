@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/devotionView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_12"
+        android:paddingLeft="@dimen/margin_16"
+        android:paddingRight="@dimen/margin_16"
+        android:paddingTop="@dimen/margin_12">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <joooonho.SelectableRoundedImageView
+                android:id="@+id/devotionImg"
+                style="@style/ListIconStyle"
+                android:layout_width="130dp"
+                android:layout_height="72dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/item_plan_default_bg"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_notify_prayer" />
+
+            <TextView
+                android:id="@+id/ad_flag"
+                android:layout_width="@dimen/ad_sign_height"
+                android:layout_height="@dimen/ad_sign_height"
+                android:layout_marginLeft="@dimen/margin_4"
+                android:layout_marginTop="@dimen/margin_4"
+                android:adjustViewBounds="true"
+                android:background="@color/ad_flag_bg"
+                android:gravity="center"
+                android:text="@string/ad_flag_txt"
+                android:textColor="@color/ad_flag_text_color"
+                android:textSize="@dimen/ad_flag_text_size" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginLeft="@dimen/margin_12"
+            android:orientation="vertical">
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/devotionTitle"
+                style="@style/DevotionListTitleTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="title"
+                roboto:typeface="@string/font_Medium" />
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/devotionDate"
+                style="@style/DevotionDateTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/devotionTitle"
+                android:layout_marginTop="@dimen/margin_2"
+                android:text="date" />
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/ad_action"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/feedback_btn_bg"
+                android:gravity="center"
+                android:minWidth="@dimen/margin_64"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:text="open"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/list_divider_white" />
+</LinearLayout>

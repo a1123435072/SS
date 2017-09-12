@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_separator_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:gravity="center_horizontal"
+    android:background="@color/list_gray_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_26"
+        android:src="@drawable/ic_home_list_separator" />
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:id="@+id/separator_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_6"
+        android:text="@string/verse_of_day"
+        android:textAllCaps="true"
+        android:textColor="@color/black_666666"
+        android:textSize="@dimen/tv_size_14" />
+
+</LinearLayout>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/primary" />
+
+    <include layout="@layout/toolbar_shadow" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--general-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="#f4f4f4">
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:scrollbarSize="14sp"
+                    android:text="@string/general"
+                    android:textColor="@color/black_999999"
+                    roboto:typeface="@string/font_Medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/language_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/robotoTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/pref_bahasa_language"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_16" />
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/current_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/margin_16"
+                    android:layout_marginTop="12dp"
+                    android:text="english"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_666666"
+                    android:textSize="@dimen/tv_size_12" />
+            </LinearLayout>
+
+            <include layout="@layout/list_divider_white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <CheckBox
+                    android:id="@+id/lock_screen_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/lock_screen_checkbox"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/lock_screen_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="@string/settings_lockscreen_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_16" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/lock_screen_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/margin_16"
+                        android:layout_marginTop="@dimen/margin_12"
+                        android:text="@string/settings_lockscreen_msg"
+                        android:textColor="@color/black_666666"
+                        android:textSize="@dimen/tv_size_12" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <include layout="@layout/list_divider_white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <CheckBox
+                    android:id="@+id/keep_screen_on_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/keep_screen_on_checkbox"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/keep_screen_on_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:text="@string/pref_biarkan_layar_menyala"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/tv_size_16" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/keep_screen_on_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/margin_16"
+                        android:layout_marginTop="@dimen/margin_12"
+                        android:text="@string/pref_layar_tidak_akan_padam_ketika_membaca_teks_alkitab"
+                        android:textColor="@color/black_666666"
+                        android:textSize="@dimen/tv_size_12" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="#f4f4f4">
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:scrollbarSize="14sp"
+                    android:text="@string/notification"
+                    android:textColor="@color/black_999999"
+                    roboto:typeface="@string/font_Medium" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/devotion_alarm_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <CheckBox
+                    android:id="@+id/devotion_reminder_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/devotion_reminder_checkbox"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/dr_notification_title"
+                        android:textColor="@color/black_333333"
+                        android:textSize="@dimen/tv_size_16" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <include layout="@layout/list_divider_white" />
+
+            <LinearLayout
+                android:id="@+id/verse_alarm_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:text="@string/verse_of_day"
+                    android:textColor="@color/black_333333"
+                    android:textSize="@dimen/tv_size_16" />
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/ver_of_day_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:scrollbarSize="14sp"
+                    android:text="@string/dr_off"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_666666"
+                    roboto:typeface="@string/font_Medium" />
+            </LinearLayout>
+
+            <include layout="@layout/list_divider_white" />
+
+            <LinearLayout
+                android:id="@+id/prayer_alarm_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:text="@string/daily_prayer"
+                    android:textColor="@color/black_333333"
+                    android:textSize="@dimen/tv_size_16" />
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/prayer_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:scrollbarSize="14sp"
+                    android:singleLine="true"
+                    android:text="@string/dr_off"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_666666"
+                    roboto:typeface="@string/font_Medium" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="#f4f4f4">
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:scrollbarSize="14sp"
+                    android:text="@string/other"
+                    android:textColor="@color/black_999999"
+                    roboto:typeface="@string/font_Medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/share_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/share_app"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_16" />
+
+            </LinearLayout>
+
+            <include layout="@layout/list_divider_white" />
+
+            <LinearLayout
+                android:id="@+id/about_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/menuTentang"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_16" />
+
+            </LinearLayout>
+
+            <include layout="@layout/list_divider_white" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

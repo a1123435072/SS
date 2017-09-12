@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/__picker_bg_material_item"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="5dip">
+
+    <ImageView
+        android:id="@+id/iv_dir_cover"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:scaleType="centerCrop" />
+
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:id="@+id/tv_dir_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/tv_dir_count"
+        android:layout_toRightOf="@+id/iv_dir_cover"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="1"
+        android:text="folder"
+        android:textColor="#000000"
+        android:textSize="14dp"
+        roboto:typeface="@string/font_Medium"/>
+
+    <TextView
+        android:id="@+id/tv_dir_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="#999999"
+        android:textSize="12dp" />
+
+
+</RelativeLayout>

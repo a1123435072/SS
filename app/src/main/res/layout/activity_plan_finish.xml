@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/read_finish_page_bg_color"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/read_finish_page_bg_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/read_finish_page_bg_color" />
+
+            <LinearLayout
+                android:id="@+id/result_layout"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <bible.bibleverse.biblia.bibleverses.scripture.holywrit.verse.devotion.view.DrawHookView
+                    android:id="@+id/finish_icon"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/txt_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/finish_good"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/very_good"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tv_size_20"
+                        roboto:typeface="@string/font_Bold" />
+
+                    <com.fw.basemodules.view.RobotoTextView
+                        android:id="@+id/finish_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/plan_finish_all_day_title"
+                        android:textColor="@color/exit_app_msg_color"
+                        android:textSize="@dimen/tv_size_14"
+                        roboto:typeface="@string/font_Light" />
+                </LinearLayout>
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:id="@+id/plan_read_day_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/plan_finish_have_read_days"
+                    android:textColor="@color/exit_app_msg_color"
+                    android:textSize="@dimen/tv_size_14"
+                    android:visibility="invisible"
+                    roboto:typeface="@string/font_Light" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/related_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/plan_finish_content_height"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:visibility="gone">
+
+                <com.fw.basemodules.view.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="@string/related_plan"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv_size_16"
+                    roboto:typeface="@string/font_Bold" />
+
+                <GridView
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:cacheColorHint="#00000000"
+                    android:clipToPadding="false"
+                    android:horizontalSpacing="12dp"
+                    android:listSelector="@null"
+                    android:numColumns="2"
+                    android:paddingBottom="12dp"
+                    android:paddingTop="12dp"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="12dp" />
+            </LinearLayout>
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/ok_btn"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/feedback_btn_bg"
+                android:gravity="center"
+                android:text="@string/ok"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tv_size_16"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

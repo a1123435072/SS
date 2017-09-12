@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="25dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/lTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="left|bottom"
+            android:text="@string/judul_titikdua"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_12" />
+
+        <EditText
+            android:id="@+id/tCaption"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/lTitle"
+            android:imeOptions="actionGo"
+            android:inputType="textCapSentences"
+            android:paddingLeft="0dp"
+            android:selectAllOnFocus="false"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_16" />
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,32 @@
+<com.fw.ls.timely.view.BackgroundLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_charging_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.fw.ls.timely.view.LSNotifyBackgroundLayout
+        android:id="@+id/wave_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <bible.bibleverse.biblia.bibleverses.scripture.holywrit.verse.devotion.view.LSHeaderLayout
+        android:id="@+id/head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <bible.bibleverse.biblia.bibleverses.scripture.holywrit.verse.devotion.view.LsSlideHintLayout
+        android:id="@+id/slid_to_unlock_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <fragment
+        android:name="bible.bibleverse.biblia.bibleverses.scripture.holywrit.verse.devotion.base.fr.LSCardStyleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/slid_to_unlock_layout"
+        android:layout_below="@id/head_layout" />
+
+</com.fw.ls.timely.view.BackgroundLayout>

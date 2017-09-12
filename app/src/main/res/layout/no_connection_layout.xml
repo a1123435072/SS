@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/no_connection_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:visibility="gone">
+
+        <ImageView
+            android:id="@+id/empty_icon"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/ic_empty_bookmark" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/tEmpty"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:text="@string/empty_bookmarks_title"
+            android:textColor="@color/black_4c4c4c"
+            android:textSize="@dimen/tv_size_16"
+            tools:visibility="visible" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/msgEmpty"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:text="@string/empty_bookmarks_msg"
+            android:textColor="@color/black_999999"
+            android:textSize="12sp"
+            tools:visibility="visible" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/bRetry"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ls_devotion_read_btn_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_24"
+            android:paddingRight="@dimen/margin_24"
+            android:text="@string/retry"
+            android:textAllCaps="true"
+            android:textColor="@color/theme_color_accent"
+            android:textSize="@dimen/tv_size_14"
+            roboto:typeface="@string/font_Medium" />
+    </LinearLayout>
+
+    <bible.bibleverse.biblia.bibleverses.scripture.holywrit.verse.devotion.view.LoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/pg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/pg_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/fm_loading_ellipsis"
+            android:textColor="@color/black_333333" />
+    </LinearLayout>
+
+</RelativeLayout>

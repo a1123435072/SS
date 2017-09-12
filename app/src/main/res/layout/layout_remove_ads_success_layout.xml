@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_remove_ads_success_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="32dp"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/ad_remove_success_title"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            roboto:typeface="@string/font_Medium" />
+
+        <com.fw.basemodules.view.RobotoTextView
+            android:id="@+id/subscibtion_success_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="@string/ad_remove_success_msg"
+            android:textColor="@color/black_666666"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <com.fw.basemodules.view.RobotoTextView
+        android:id="@+id/donate_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/feedback_btn_bg"
+        android:gravity="center"
+        android:text="@string/donate"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roboto="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingLeft="@dimen/margin_16"
+        android:paddingRight="@dimen/margin_16">
+
+        <RelativeLayout
+            android:id="@+id/img_layout"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_default_bg"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:id="@+id/new_content_flag"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/circle_red" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/subscribe_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="@dimen/margin_6">
+
+            <ImageView
+                android:id="@+id/subscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:layout_toLeftOf="@id/subscribe_layout"
+            android:layout_toRightOf="@id/img_layout"
+            android:orientation="vertical">
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tv_size_20"
+                roboto:typeface="@string/font_Medium" />
+
+            <com.fw.basemodules.view.RobotoTextView
+                android:id="@+id/subscribe_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subscribe_num"
+                android:textColor="@color/black_999999"
+                android:textSize="@dimen/tv_size_14"
+                roboto:typeface="@string/font_Regular" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/list_divider_white" />
+</LinearLayout>
